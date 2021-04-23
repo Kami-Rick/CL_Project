@@ -1,0 +1,171 @@
+
+* {
+  box-sizing: border-box;
+}
+
+/* Nav */
+/* Sign Content */
+.content-sign {
+  background-color: #000000;
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 95vh;
+  margin: 0;
+}
+
+.container-sign, .container-login {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  width: 400px;
+  max-width: 100%;
+}
+
+.header-sign, .header-login  {
+  border-bottom: 1px solid #f0f0f0;
+  background-color: #f7f7f7;
+  padding: 20px 40px;
+}
+
+.header-sign h2, .header-login h2 {
+  margin: 0;
+}
+
+.form-sign, .form-login {
+  padding: 30px 40px; 
+}
+
+.form-control-sign, .form-control-login {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.form-control-sign label, .form-control-login label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.form-control-sign input, .form-control-login input {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  font-family: inherit;
+  font-size: 14px;
+  padding: 10px;
+  width: 100%;
+}
+
+.form-control-sign input:focus, .form-control-login input:focus {
+  outline: 0;
+  border-color: #777;
+}
+
+.form-control-sign.success input, .form-control-login.success input{
+  border-color: #2ecc71;
+}
+
+.form-control-sign.error input, .form-control-login.error input {
+  border-color: #e74c3c;
+}
+
+.form-control-sign i, .form-control-login i {
+  visibility: hidden;
+  position: absolute;
+  top: 40px;
+  right: 10px;
+}
+
+.form-control-sign.success i.fa-check-circle, .form-control-login.success i.fa-check-circle {
+  color: #2ecc71;
+  visibility: visible;
+}
+
+.form-control-sign.error i.fa-exclamation-circle, .form-control-login.error i.fa-exclamation-circle {
+  color: #e74c3c;
+  visibility: visible;
+}
+
+.form-control-sign small, .form-control-login small {
+  color: #e74c3c;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.form-control-sign.error small, .form-control-login.error small {
+  visibility: visible;
+}
+
+.sign-btn{
+    padding: 10px 0;
+}
+
+.form-sign a, .form-login a {
+    color: #000000;
+    font-weight: bold;
+}
+
+.container{
+    width: 55vw;
+}
+
+.content{
+    background: #000000;
+    min-height: 95vh;
+}
+
+hr{
+    border: 1px solid #333333;
+}
+
+h2, h4, h6{
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.gray-text{
+    color: #6b6b6b;
+    font-size: 18px;
+}
+
+.footer-link {
+    font-size: 14px;
+}
+
+.footer-link:hover {
+    color: #ffffff;
+}
+
+.copyright-text {
+    font-size: 14px;
+}
+
+#macs_paragraph
+{
+  font-size: medium;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+#iphone_paragraph
+{
+  font-size: medium;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#watch_paragraph
+{
+  font-size: medium;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#ipad_paragraph
+{
+  font-size: medium;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
