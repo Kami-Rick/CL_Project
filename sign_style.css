@@ -6,12 +6,14 @@
 /* Nav */
 /* Sign Content */
 .content-sign {
-  background-color: #000000;
-  font-family: 'Open Sans', sans-serif;
+  background-color: #AFA5D9;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 12px;
+  font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 95vh;
+  min-height: 100vh;
   margin: 0;
 }
 
@@ -27,20 +29,22 @@
 .header-sign, .header-login  {
   border-bottom: 1px solid #f0f0f0;
   background-color: #f7f7f7;
-  padding: 20px 40px;
+  padding: 10px 40px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
 }
 
 .header-sign h2, .header-login h2 {
-  margin: 0;
+  margin: 10px;
 }
 
 .form-sign, .form-login {
-  padding: 30px 40px; 
+  padding: 10px 30px; 
 }
 
 .form-control-sign, .form-control-login {
   margin-bottom: 10px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   position: relative;
 }
 
