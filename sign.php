@@ -19,24 +19,24 @@
             <div class="header-sign">
                 <h2 style="color: black">Create Account</h2>
             </div>
-            <form id="form-sign" class="form-sign">
+            <form action="reg-up.php" method="POST" id="form-sign" class="form-sign">
                 <div class="form-control-sign">
                     <label for="username">Username</label>
-                    <input type="text" placeholder="username" id="username" />
+                    <input type="text" placeholder="username" id="username" name="uname" />
                     <i class="fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
                     <p><small>Error message</small></p>
                 </div>
                 <div class="form-control-sign">
                     <label for="username">Email</label>
-                    <input type="email" placeholder="example@gmail.com" id="email" />
+                    <input type="email" placeholder="example@gmail.com" id="email" name="email-reg" />
                     <i class="fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
                     <p><small>Error message</small></p>
                 </div>
                 <div class="form-control-sign">
                     <label for="username">Password</label>
-                    <input type="password" placeholder="Password" id="password" />
+                    <input type="password" placeholder="Password" id="password" name="pwd" />
                     <i class="fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
                     <p><small>Error message</small></p>
