@@ -67,7 +67,7 @@
                     <span class="nav__name">Analytics</span>
                 </a>
                 
-                <a href="sign.html" class="nav__link">
+                <a href="sign.php" class="nav__link">
                     <i class='bx bx-right-arrow nav__icon'></i>
                     <span class="nav__name">Register</span>
                 </a>
