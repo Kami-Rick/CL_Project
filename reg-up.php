@@ -1,5 +1,5 @@
 <?php 
-require_once 'db_php';
+require_once 'db.php';
 
 $uname = trim($_POST['uname']);
 $email_reg = trim($_POST['email-reg']);
