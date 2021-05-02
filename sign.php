@@ -58,7 +58,7 @@
             <div class="header-login">
                 <h2 style="color: black">Enter your account</h2>
             </div>
-            <form id="form-login" class="form-login">
+            <form action="auth.php" method="post" id="form-login" class="form-login">
 
                 <div class="form-control-login">
                     <label for="username">Email</label>
