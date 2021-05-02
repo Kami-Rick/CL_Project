@@ -62,14 +62,14 @@
 
                 <div class="form-control-login">
                     <label for="username">Email</label>
-                    <input type="email" placeholder="example@gmail.com" id="email-login" name="email-login"/>
+                    <input type="email" placeholder="example@gmail.com" id="email-login" name="email-log"/>
                     <i class="fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
                     <p><small>Error message</small></p>
                 </div>
                 <div class="form-control-login">
                     <label for="username">Password</label>
-                    <input type="password" placeholder="Password" id="password-login" name="password-login"/>
+                    <input type="password" placeholder="Password" id="password-login" name="password-log"/>
                     <i class="fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
                     <p><small>Error message</small></p>
