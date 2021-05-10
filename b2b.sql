@@ -1,3 +1,4 @@
+-- CREATE DATABASE `users`;
 -- phpMyAdmin SQL Dump
 -- version 4.9.5
 -- https://www.phpmyadmin.net/
@@ -111,16 +112,13 @@ INSERT INTO `hypotheses_library` (`hypotheses_id`, `category_id`, `description`)
 -- Table structure for table `users`
 --
 
-CREATE TABLE `users` (
-  `id` int(11) UNSIGNED NOT NULL,
-  `fname` varchar(30) DEFAULT NULL,
-  `lname` varchar(30) DEFAULT NULL,
-  `nickname` varchar(30) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `passwordd` varchar(32) NOT NULL,
-  `phonenumb` int(11) DEFAULT NULL,
-  `bday` date DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+CREATE TABLE `web`.`users` (
+ `id` INT(11) NOT NULL AUTO_INCREMENT ,
+ `username` VARCHAR(100) NULL , 
+ `email` VARCHAR(100) NULL , 
+ `password` VARCHAR(100) NULL , 
+ PRIMARY KEY (`id`)
+ ) ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_general_ci;
 
 --
 -- Indexes for dumped tables
@@ -140,16 +138,6 @@ ALTER TABLE `hypotheses_library`
   ADD KEY `fk_foreign_key_name` (`category_id`);
 
 --
--- Indexes for table `users`
---
-ALTER TABLE `users`
-  ADD UNIQUE KEY `id` (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
 -- AUTO_INCREMENT for table `category_hypotheses`
 --
 ALTER TABLE `category_hypotheses`
@@ -162,12 +150,6 @@ ALTER TABLE `hypotheses_library`
   MODIFY `hypotheses_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
--- AUTO_INCREMENT for table `users`
---
-ALTER TABLE `users`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
-COMMIT;
-
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
