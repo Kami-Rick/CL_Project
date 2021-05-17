@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Traffic</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ===== BOX ICONS ===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <!-- ===== BOOTSTRAP 4 ===== -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="traffic.css">
+</head>
+
+<body id="body-pd">
+    <header class="header" id="header">
+        <div class="header__toggle">
+            <i class='bx bx-menu' id="header-toggle"></i>
+        </div>
+        <div class="header__img">
+            <img src="perfil.jpg" alt="">
+        </div>
+    </header>
+    <div class="l-navbar" id="nav-bar">
+        <nav class="nav">
+            <div>
+                <a href="#" class="nav__logo">
+                    <i class='bx bx-layer nav__logo-icon'></i>
+                    <span class="nav__logo-name">Business helper</span>
+                </a>
+                <div class="nav__list">
+                    <a href="#" class="nav__link ">
+                        <i class='bx bx-grid-alt nav__icon'></i>
+                        <span class="nav__name">Hypotheses</span>
+                    </a>
+                    <a href="#" class="nav__link">
+                        <i class='bx bx-user nav__icon'></i>
+                        <span class="nav__name">Co-worker</span>
+                    </a>
+                    <a href="lib_hyp.php" class="nav__link">
+                        <i class='bx bx-message-square-detail nav__icon'></i>
+                        <span class="nav__name">Library of hypotheses</span>
+                    </a>
+                    <a href="traffic.html" class="nav__link active">
+                        <i class='bx bx-bookmark nav__icon'></i>
+                        <span class="nav__name">Traffic</span>
+                    </a>
+                    <a href="#" class="nav__link">
+                        <i class='bx bx-folder nav__icon'></i>
+                        <span class="nav__name">Finance</span>
+                    </a>
+                    <a href="#" class="nav__link">
+                        <i class='bx bx-bar-chart-alt-2 nav__icon'></i>
+                        <span class="nav__name">Analytics</span>
+                    </a>
+
+                </div>
+            </div>
+            <a href="#" class="nav__link">
+                <i class='bx bx-log-out nav__icon'></i>
+                <span class="nav__name">Log Out</span>
+            </a>
+        </nav>
+    </div>
+
+    <div class="container">
+        <p id="tt">Traffic channels</p>
+    </div>
+    
+
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-md-12 table-responsive">
+                <table class="table  table-hover table-sortable" id="tab_logic">
+                    <thead>
+                        <tr>
+                            <th class="text-center">
+                                Name
+                            </th>
+                            <th class="text-center">
+                                Views
+                            </th>
+                            <th class="text-center">
+                                Clicks
+                            </th>
+                            <th class="text-center">
+                                Price
+                            </th>
+                            <th class="text-center">
+                                CAC
+                            </th>
+                            <th class="text-center">
+                                Source
+                            </th>
+                            <th class="text-center">
+                                <a id="add_row" class="btn float-right">+</a>
+                            </th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id='addr0' data-id="0" class="hidden">
+                            <td data-name="name">
+                                <input type="text" name='name0' placeholder='Name' class="form-control" />
+                            </td>
+                            <td data-name="views">
+                                <input type="text" name='views' placeholder='' class="form-control" />
+                            </td>
+                            <td data-name="clicks">
+                                <input type="text" name='clicks' placeholder='' class="form-control" />
+                            </td>
+                            <td data-name="price">
+                                <input type="text" name='price' placeholder='' class="form-control" />
+                            </td>
+                            <td data-name="cac">
+                                <input type="text" name='cac' placeholder='' class="form-control" disabled />
+                            </td>
+                            <td data-name="sel">
+                                <select  class="selectpicker" onchange='CheckColors(this.value);' >
+                                    <option value="">Select a platform</option>
+                                    <option value="1">Instagram</option>
+                                    <option value="2">VK</option>
+                                    <option value="3">Twitter</option>
+                                    <option value="4">TikTok</option>
+                                    <option value="5">WhatsApp</option>
+                                    <option value="6">Facebook</option>
+                                    <option value="7">YouTube</option>
+                                </select>
+                                
+                            </td>
+
+                            <td data-name="del">
+                                <button name="del0" class='btn  glyphicon glyphicon-remove row-remove' id="btn"><span
+                                        aria-hidden="true"></span><i class="fa fa-trash-o"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <p>Total CAC from all platforms: <b></b></p>
+        <p>*CAC - Customer Acquisition Cost</p>
+        <script src="traffic.js"></script>
+</body>
+
+</html>
