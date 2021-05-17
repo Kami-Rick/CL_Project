@@ -59,17 +59,17 @@
                     <span class="nav__name">Site description</span>
                 </a>
 
-                <a href="#" class="nav__link">
+                <a href="hypotheses.html" class="nav__link">
                     <i class='bx bx-user nav__icon' ></i>
                     <span class="nav__name">Hypotheses</span>
                 </a>
 
-                <a href="#" class="nav__link">
+                <a href="lib_hyp.php" class="nav__link">
                     <i class='bx bx-message-square-detail nav__icon' ></i>
                     <span class="nav__name">Library of hypotheses</span>
                 </a>
 
-                <a href="#" class="nav__link">
+                <a href="traffic.html" class="nav__link">
                     <i class='bx bx-bookmark nav__icon' ></i>
                     <span class="nav__name">Traffic</span>
                 </a>
