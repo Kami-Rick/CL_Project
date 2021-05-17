@@ -37,7 +37,7 @@
             </a>
 
             <div class="nav__list">
-                <a href="#" class="nav__link active">
+                <a href="hypotheses.html" class="nav__link active">
                     <i class='bx bx-grid-alt nav__icon' ></i>
                     <span class="nav__name">Hypotheses</span>
                 </a>
@@ -52,7 +52,7 @@
                     <span class="nav__name">Library of hypotheses</span>
                 </a>
 
-                <a href="#" class="nav__link">
+                <a href="traffic.html" class="nav__link">
                     <i class='bx bx-bookmark nav__icon' ></i>
                     <span class="nav__name">Traffic</span>
                 </a>
