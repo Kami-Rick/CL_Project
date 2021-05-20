@@ -1,16 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Site description</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hypotheses</title>
 
+    <!-- ===== BOX ICONS ===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <!-- ===== BOOTSTRAP 4 ===== -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="hypotheses.css">
-</head>
-<body>
 
-<div id="container">
-    <div id="header">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+</head>
+<body id="body-pd">
+<header class="header" id="header">
+    <div class="header__toggle">
+        <i class='bx bx-menu' id="header-toggle"></i>
+    </div>
+    <div class="action">
+        <div class="profile" onclick="myFunction()">
+            <img src="pexels-photo-3134555.jpeg">
+        </div>
+        <div class="menu">
+            <h3>Someone else
+                <div>Director</div>
+            </h3>
+            <ul>
+                <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> My Profile</a></li>
+                <li><a href="#"><i class="fas fa-edit" aria-hidden="true"></i> Edit Profile</a></li>
+                <li><a href="#"><i class="fa fa-cogs" aria-hidden="true"></i> Settings</a></li>
+                <li><a href="#"><i class="fa fa-question" aria-hidden="true"></i> Help</a></li>
+                <li><a href="#"><i class="fa fa-sign-out-alt" aria-hidden="true"></i> Logout</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<div class="l-navbar" id="nav-bar">
+    <nav class="nav">
+        <div>
+            <a href="#" class="nav__logo">
+                <i class='bx bx-layer nav__logo-icon'></i>
+                <span class="nav__logo-name">Business helper</span>
+            </a>
+            <div class="nav__list">
+                <a href="#" class="nav__link active">
+                    <i class='bx bx-grid-alt nav__icon' ></i>
+                    <span class="nav__name">Site description</span>
+                </a>
+
+                <a href="#" class="nav__link">
+                    <i class='bx bx-user nav__icon' ></i>
+                    <span class="nav__name">Hypotheses</span>
+                </a>
+
+                <a href="lib_hyp.html" class="nav__link">
+                    <i class='bx bx-message-square-detail nav__icon' ></i>
+                    <span class="nav__name">Library of hypotheses</span>
+                </a>
+
+                <a href="#" class="nav__link">
+                    <i class='bx bx-bookmark nav__icon' ></i>
+                    <span class="nav__name">Traffic</span>
+                </a>
+
+                <a href="#" class="nav__link">
+                    <i class='bx bx-folder nav__icon' ></i>
+                    <span class="nav__name">Finance</span>
+                </a>
+                <a href="sign.php" class="nav__link">
+                    <i class='bx bx-right-arrow nav__icon'></i>
+                    <span class="nav__name">Register</span>
+                </a>
+            </div>
+        </div>
+
+        <a href="#" class="nav__link">
+            <i class='bx bx-log-out nav__icon' ></i>
+            <span class="nav__name">Log Out</span>
+        </a>
+    </nav>
+</div>
+
+<div id="containerhyp">
+    <div id="header1">
         <div id="monthDisplay"></div>
         <div>
             <button id="backButton">Back</button>
