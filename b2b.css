@@ -28,7 +28,7 @@ nav{
     align-items: center;
     justify-content: space-around;
     padding: 10px 30px;
-    background-color:#fff;
+    background-color:#4723D9;
     box-shadow: 2px 2px 20px rgba(90,118,253,0.13);
     z-index: 1;
     width:100%;
@@ -50,11 +50,11 @@ nav ul li a{
     font-size: 0.9rem;
     text-transform: uppercase;
     font-weight: 400;
-    color:#111;
+    color: white;
     letter-spacing: 1px;
 }
 nav ul li a:hover{
-    background-color: #5a76fd;
+    background-color: #4723D9;
     color:#fff;
     box-shadow: 5px 10px 30px rgba(90,118,253,0.5);
     transition: all ease 0.2s;
@@ -103,7 +103,7 @@ nav ul li a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #5a76fd;
+    background-color: #4723D9;
     color:#fff;
     box-shadow: 5px 10px 30px rgba(90,118,253,0.5);
     text-transform: uppercase;
@@ -121,24 +121,21 @@ nav ul li a:hover{
     justify-content: space-around;
     align-items: center;
 }
-.office-time,
-.office-number{
+.office-time{
     margin: 0px 20px;
 }
-.office-time h3,
-.office-number h3{
+.office-time h3{
     font-weight: 700;
     color:#22252e;
     font-size: 1.6rem;
     margin: 0px;
 }
-.office-number p,
+
 .office-time p{
     color:#777474;
     font-size: 1.1rem;
 }
-.office-time font,
-.office-number font{
+.office-time font{
     color:#7b92fd;
     font-weight: 700;
 }
