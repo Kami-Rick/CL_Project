@@ -1,3 +1,43 @@
+/*===== SHOW NAVBAR  =====*/
+const showNavbar = (toggleId, navId, bodyId, headerId) =>{
+    const toggle = document.getElementById(toggleId),
+        nav = document.getElementById(navId),
+        bodypd = document.getElementById(bodyId),
+        headerpd = document.getElementById(headerId)
+
+    // Validate that all variables exist
+    if(toggle && nav && bodypd && headerpd){
+        toggle.addEventListener('click', ()=>{
+            // show navbar
+            nav.classList.toggle('show')
+            // change icon
+            toggle.classList.toggle('bx-x')
+            // add padding to body
+            bodypd.classList.toggle('body-pd')
+            // add padding to header
+            headerpd.classList.toggle('body-pd')
+        })
+    }
+}
+
+showNavbar('header-toggle','nav-bar','body-pd','header')
+
+/*===== LINK ACTIVE  =====*/
+const linkColor = document.querySelectorAll('.nav__link')
+
+function colorLink(){
+    if(linkColor){
+        linkColor.forEach(l=> l.classList.remove('active'))
+        this.classList.add('active')
+    }
+}
+linkColor.forEach(l=> l.addEventListener('click', colorLink))
+
+function myFunction() {
+    var dropdownContent = document.querySelector('.menu');
+    dropdownContent.classList.toggle('active');
+}
+
 let nav = 0;
 let clicked = null;
 let events = localStorage.getItem('events') ? JSON.parse(localStorage.getItem('events')) : [];
@@ -15,11 +55,11 @@ function openModal(date) {
     const eventForDay = events.find(e => e.date === clicked);
 
     if (eventForDay) {
-        document.getElementById('eventText').innerText = eventForDay.title;
-        deleteEventModal.style.display = 'block';
-    } else {
-        newEventModal.style.display = 'block';
-    }
+    document.getElementById('eventText').innerText = eventForDay.title;
+    deleteEventModal.style.display = 'block';
+} else {
+    newEventModal.style.display = 'block';
+}
 
     backDrop.style.display = 'block';
 }
@@ -28,8 +68,8 @@ function load() {
     const dt = new Date();
 
     if (nav !== 0) {
-        dt.setMonth(new Date().getMonth() + nav);
-    }
+    dt.setMonth(new Date().getMonth() + nav);
+}
 
     const day = dt.getDate();
     const month = dt.getMonth();
@@ -39,46 +79,46 @@ function load() {
     const daysInMonth = new Date(year, month + 1, 0).getDate();
 
     const dateString = firstDayOfMonth.toLocaleDateString('en-us', {
-        weekday: 'long',
-        year: 'numeric',
-        month: 'numeric',
-        day: 'numeric',
-    });
+    weekday: 'long',
+    year: 'numeric',
+    month: 'numeric',
+    day: 'numeric',
+});
     const paddingDays = weekdays.indexOf(dateString.split(', ')[0]);
 
     document.getElementById('monthDisplay').innerText =
-        `${dt.toLocaleDateString('en-us', { month: 'long' })} ${year}`;
+    `${dt.toLocaleDateString('en-us', { month: 'long' })} ${year}`;
 
     calendar.innerHTML = '';
 
     for(let i = 1; i <= paddingDays + daysInMonth; i++) {
-        const daySquare = document.createElement('div');
-        daySquare.classList.add('day');
+    const daySquare = document.createElement('div');
+    daySquare.classList.add('day');
 
-        const dayString = `${month + 1}/${i - paddingDays}/${year}`;
+    const dayString = `${month + 1}/${i - paddingDays}/${year}`;
 
-        if (i > paddingDays) {
-            daySquare.innerText = i - paddingDays;
-            const eventForDay = events.find(e => e.date === dayString);
+    if (i > paddingDays) {
+    daySquare.innerText = i - paddingDays;
+    const eventForDay = events.find(e => e.date === dayString);
 
-            if (i - paddingDays === day && nav === 0) {
-                daySquare.id = 'currentDay';
-            }
+    if (i - paddingDays === day && nav === 0) {
+    daySquare.id = 'currentDay';
+}
 
-            if (eventForDay) {
-                const eventDiv = document.createElement('div');
-                eventDiv.classList.add('event');
-                eventDiv.innerText = eventForDay.title;
-                daySquare.appendChild(eventDiv);
-            }
+    if (eventForDay) {
+    const eventDiv = document.createElement('div');
+    eventDiv.classList.add('event');
+    eventDiv.innerText = eventForDay.title;
+    daySquare.appendChild(eventDiv);
+}
 
-            daySquare.addEventListener('click', () => openModal(dayString));
-        } else {
-            daySquare.classList.add('padding');
-        }
+    daySquare.addEventListener('click', () => openModal(dayString));
+} else {
+    daySquare.classList.add('padding');
+}
 
-        calendar.appendChild(daySquare);
-    }
+    calendar.appendChild(daySquare);
+}
 }
 
 function closeModal() {
@@ -93,18 +133,18 @@ function closeModal() {
 
 function saveEvent() {
     if (eventTitleInput.value) {
-        eventTitleInput.classList.remove('error');
+    eventTitleInput.classList.remove('error');
 
-        events.push({
-            date: clicked,
-            title: eventTitleInput.value,
-        });
+    events.push({
+    date: clicked,
+    title: eventTitleInput.value,
+});
 
-        localStorage.setItem('events', JSON.stringify(events));
-        closeModal();
-    } else {
-        eventTitleInput.classList.add('error');
-    }
+    localStorage.setItem('events', JSON.stringify(events));
+    closeModal();
+} else {
+    eventTitleInput.classList.add('error');
+}
 }
 
 function deleteEvent() {
@@ -120,9 +160,9 @@ function initButtons() {
     });
 
     document.getElementById('backButton').addEventListener('click', () => {
-        nav--;
-        load();
-    });
+    nav--;
+    load();
+});
 
     document.getElementById('saveButton').addEventListener('click', saveEvent);
     document.getElementById('cancelButton').addEventListener('click', closeModal);
