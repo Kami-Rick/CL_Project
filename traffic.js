@@ -75,13 +75,6 @@ $(document).ready(function() {
             }
         });
         
-        
-        // add the new row
-        $(tr).appendTo($('#tab_logic'));
-        
-        $(tr).find("td button.row-remove").on("click", function() {
-             $(this).closest("tr").remove();
-        });
 });
 
 
