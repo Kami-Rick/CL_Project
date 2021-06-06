@@ -238,3 +238,7 @@ select {
 input{
     width: 70%;
 }
+
+table td {
+    width: 170px;
+}
