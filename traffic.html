@@ -13,13 +13,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <script type="text/javascript" src="jquery.min.js"></script>
 
     <!-- ===== CSS ===== -->
     <link rel="stylesheet" href="traffic.css">
 </head>
 
-<body id="body-pd">
+<body id="body-pd" onload="get()">
     <header class="header" id="header">
         <div class="header__toggle">
             <i class='bx bx-menu' id="header-toggle"></i>
@@ -77,7 +77,7 @@
     <div class="container">
         <p><br></p>
         <form id="cart">
-    <table name="cart">
+    <table name="cart" id="table">
         <tr>
             <th></th>
             <th>Name</th>
@@ -89,24 +89,27 @@
             <th>CAC</th>
         </tr>
         <tr class="line_items">
-            <td><button class="row-remove">Remove</button></td>
-            <td><input type="text" name="name"></td>
-            <td><input type="text" name="source"></td>
-            <td><input type="text" name="views"></td>
-            <td><input type="text" name="clicks" value="1"></td>
-            <td><input type="text" name="price" value="1"></td>
+            <td><button class="row-remove">Remove</button></td> <!-- class row/row-remove -->
+
+            <td><input type="text" id="name"></td>
+            <td><input type="text" id="source"></td>
+            <td><input type="text" id="views"></td>
+            <td><input type="text" name="clicks" id="clicks" class="numm" ></td>
+            <td><input type="text" name="price" id="price" class="numm" ></td>
             <td>&nbsp;</td>
-            <td><input type="text" name="cac" value="" jAutoCalc="{price} / {clicks}"></td>
+            <td><input type="text" name="total" id="total" ></td>
         </tr>
+
         <tr>
             <td colspan="3">&nbsp;</td>
             <td>Total CAC</td>
             <td>&nbsp;</td>
-            <td><input type="text" name="total_cac" value="" jAutoCalc="SUM({cac})"></td>
+            <td><input type="text" name="total2" id="total2"></td>
         </tr>
             <td colspan="99"><button class="row-add">Add Row</button></td>
         </tr>
     </table>
+
 </form>
 
     <br><p>*CAC - Customer Acquisition Cost</p>
@@ -148,11 +151,29 @@
                 autoCalcSetup();
 
             });
+                            //////////////////////////////////////////
+
+
 
         });
+
+        
+
     </script>
 
-
+    <script type="text/javascript">
+        $('.numm').keyup(function() {
+            var rowCount = $("#table tr").length - 3;
+            var clicks = Number($('#clicks').val());
+            var price = Number($('#price').val());
+            var pre = Number(price / clicks);
+            var res = Number((price / clicks)/ rowCount);
+            
+            $('#total').val(pre);
+            $('#total2').val(res);
+     
+        });
+    </script>
 
         <script src="traffic.js" defer></script>
 </body>
